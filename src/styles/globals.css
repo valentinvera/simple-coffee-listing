@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom__section {
+    @apply mx-auto mt-[85px] flex w-[85%] flex-col items-center gap-4 rounded-xl bg-charcoal-gray pb-20 pt-24 xl:mb-32 xl:text-base;
+  }
+}
+
+body {
+  font-family: theme(fontFamily.sans);
+  background-color: theme(backgroundColor.rich-black);
+  background-image: theme(backgroundImage.body-pattern);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-img {
+  background-image: theme(backgroundImage.hero-vector);
+  background-repeat: no-repeat;
+  background-position: 11.85rem 2.7rem;
+}
+
+@media screen and (40rem <= width <= 64rem) {
+  .custom__section {
+    width: 58%;
+  }
+}
+
+@media screen and (64rem <= width <= 80rem) {
+  .custom__section {
+    width: 75%;
+  }
+
+  .bg-img {
+    background-position: 23.8rem 2.6rem;
+  }
+}
+
+@media screen and (width >= 80rem) {
+  .bg-img {
+    background-position: 34.5rem 1.75rem;
+  }
+}
